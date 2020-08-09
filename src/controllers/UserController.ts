@@ -12,9 +12,9 @@ export default {
 
   async create(req: Request, res: Response) {
     const emailService = new EmailService()
-    emailService.sendMail(
-      { email: 'augusto@email.com', name: 'augusto renan' },
-      { subject: 'Voce foi selecionado', body: 'parabens, voce foi selecionado' }
-    )
+    emailService.sendMail({
+      to: { email: 'augusto@email.com', name: 'augusto renan' },
+      message: { subject: 'Voce foi selecionado', body: 'parabens, voce foi selecionado' }
+    })
   }
 }
