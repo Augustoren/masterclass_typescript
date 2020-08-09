@@ -14,3 +14,5 @@ class EmailService {
     console.log(`Mail send to ${to.name}: ${message.body}`)
   }
 }
+
+export default EmailService
